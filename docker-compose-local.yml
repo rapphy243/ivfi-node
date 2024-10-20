@@ -1,6 +1,9 @@
 services:
   ivfi:
-    image: ghcr.io/rapphy243/ivfi:latest
+    build:
+      context: ./
+      dockerfile: ./dockerfile
+    image: rapphy243/ivfi-node
     container_name: ivfi
     hostname: ivfi
     volumes:
